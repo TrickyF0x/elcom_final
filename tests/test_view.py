@@ -2,6 +2,8 @@ import allure
 
 from django.middleware.csrf import _get_new_csrf_string
 
+from shop.models import Product
+
 OK_STATUS_CODE = 200
 
 
@@ -36,4 +38,6 @@ def test_service_page(test_main):
         index = response.text.find('<div class="card">', index)
 
     with allure.step('Подсчет числа продуктов'):
-        assert count == 10, f"Всего {count} продуктов"
+        assert count == 13, f"Всего {count} продуктов"
+
+

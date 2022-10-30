@@ -49,7 +49,3 @@ def login_data(test_main):
     }
     return acc_data
 
-
-@pytest.fixture
-def get_db():
-    return get_db
